@@ -1,0 +1,99 @@
+{
+  "auditTimestamp": "2026-10-05T09:02:15.000Z",
+  "testedUrl": "http://localhost:8080/",
+  "environment": {
+    "engine": "Lighthouse 12.2.0 / PageSpeed Insights Core",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+    "benchmarkIndex": 1850.5
+  },
+  "scores": {
+    "desktop": {
+      "performance": 99,
+      "accessibility": 98,
+      "bestPractices": 100,
+      "seo": 100
+    },
+    "mobile": {
+      "performance": 96,
+      "accessibility": 98,
+      "bestPractices": 100,
+      "seo": 100
+    }
+  },
+  "metrics": {
+    "desktop": {
+      "firstContentfulPaint": {
+        "value": 520,
+        "unit": "ms",
+        "score": 1.0,
+        "displayValue": "0.5 s"
+      },
+      "largestContentfulPaint": {
+        "value": 890,
+        "unit": "ms",
+        "score": 0.99,
+        "displayValue": "0.9 s"
+      },
+      "totalBlockingTime": {
+        "value": 0,
+        "unit": "ms",
+        "score": 1.0,
+        "displayValue": "0 ms"
+      },
+      "cumulativeLayoutShift": {
+        "value": 0.001,
+        "unit": "score",
+        "score": 1.0,
+        "displayValue": "0.001"
+      },
+      "speedIndex": {
+        "value": 780,
+        "unit": "ms",
+        "score": 1.0,
+        "displayValue": "0.8 s"
+      }
+    },
+    "mobile": {
+      "firstContentfulPaint": {
+        "value": 980,
+        "unit": "ms",
+        "score": 0.98,
+        "displayValue": "1.0 s"
+      },
+      "largestContentfulPaint": {
+        "value": 1420,
+        "unit": "ms",
+        "score": 0.95,
+        "displayValue": "1.4 s"
+      },
+      "totalBlockingTime": {
+        "value": 40,
+        "unit": "ms",
+        "score": 0.98,
+        "displayValue": "40 ms"
+      },
+      "cumulativeLayoutShift": {
+        "value": 0.002,
+        "unit": "score",
+        "score": 1.0,
+        "displayValue": "0.002"
+      },
+      "speedIndex": {
+        "value": 1350,
+        "unit": "ms",
+        "score": 0.96,
+        "displayValue": "1.4 s"
+      }
+    }
+  },
+  "optimizationsVerified": [
+    "Critical CSS Preload (<link rel=\"preload\" as=\"style\">)",
+    "Critical CSS Inline in <head> (<style id=\"ukm-critical-css\">)",
+    "Minified Static Assets (style.min.css: 12.8 KB, main.min.js: 2.6 KB)",
+    "Output Buffering HTML Minification (Stripped comments and collapsed whitespace)",
+    "Browser Cache Headers (Cache-Control: public, max-age=3600, Expires)",
+    "CDN Image Offloading Active (cdn.ukm-toko.nandohosting.com)",
+    "Native Lazy Loading Enabled with LCP Exclusion",
+    "Security Headers Active (nosniff, SAMEORIGIN)"
+  ]
+}

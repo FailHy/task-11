@@ -1,0 +1,38 @@
+[2026-10-05 07:34:18 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2026-10-05 07:34:42 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2026-10-05 07:39:50 : INFO] - Cache for URL: http://localhost:8080/produk/beras-premium-ukm/ has been purged, triggered by action: save_post 
+[2026-10-05 07:39:50 : INFO] - Cache for archive page associated with post_type: produk and Title: "Beras Premium UKM" has been purged, triggered by action: save_post 
+[2026-10-05 07:39:50 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-10-05 07:39:50 : INFO] - Cache for URL: http://localhost:8080/produk/minyak-goreng-higienis/ has been purged, triggered by action: save_post 
+[2026-10-05 07:39:50 : INFO] - Cache for archive page associated with post_type: produk and Title: "Minyak Goreng Higienis" has been purged, triggered by action: save_post 
+[2026-10-05 07:39:50 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-10-05 07:39:50 : INFO] - Cache for URL: http://localhost:8080/produk/sabun-mandi-herbal/ has been purged, triggered by action: save_post 
+[2026-10-05 07:39:50 : INFO] - Cache for archive page associated with post_type: produk and Title: "Sabun Mandi Herbal" has been purged, triggered by action: save_post 
+[2026-10-05 07:39:50 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-10-05 07:39:50 : INFO] - Cache for URL: http://localhost:8080/produk/kopi-bubuk-robusta-dampit/ has been purged, triggered by action: save_post 
+[2026-10-05 07:39:50 : INFO] - Cache for archive page associated with post_type: produk and Title: "Kopi Bubuk Robusta Dampit" has been purged, triggered by action: save_post 
+[2026-10-05 07:39:50 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-10-05 09:04:20 : INFO] - Cache for URL: http://localhost:8080/blog/ has been purged, triggered by action: save_post 
+[2026-10-05 09:04:22 : INFO] - Cache for homepage has been purged due to changes in the Posts page options, triggered by action: update_option_page_for_posts 
+[2026-10-05 09:30:50 : INFO] - Cache for URL: http://localhost:8080/ has been purged, triggered by action: save_post 
+[2026-10-05 09:30:50 : INFO] - Cache for author page URL: http://localhost:8080/author/admin/ associated with post_type: page and Title: "Beranda" has been purged, triggered by action: save_post 
+[2026-10-05 09:33:01 : INFO] - Cache for term page with URL: http://localhost:8080/product-category/kebersihan/  have been purged, triggered by action: edit_terms 
+[2026-10-05 09:33:01 : INFO] - Cache for associated posts for term with URL: http://localhost:8080/product-category/kebersihan/ have been purged, triggered by action: edit_terms 
+[2026-10-05 09:33:24 : INFO] - Cache for term page with URL: http://localhost:8080/product-category/minuman/  have been purged, triggered by action: edit_terms 
+[2026-10-05 09:33:24 : INFO] - Cache for associated posts for term with URL: http://localhost:8080/product-category/minuman/ have been purged, triggered by action: edit_terms 
+[2026-10-05 09:34:48 : INFO] - Cache for term page with URL: http://localhost:8080/product-category/sembako/  have been purged, triggered by action: edit_terms 
+[2026-10-05 09:34:48 : INFO] - Cache for associated posts for term with URL: http://localhost:8080/product-category/sembako/ have been purged, triggered by action: edit_terms 
+[2026-10-05 09:35:00 : INFO] - Cache for term page with URL: http://localhost:8080/product-category/snack/  have been purged, triggered by action: edit_terms 
+[2026-10-05 09:35:00 : INFO] - Cache for associated posts for term with URL: http://localhost:8080/product-category/snack/ have been purged, triggered by action: edit_terms 
+[2026-10-05 09:57:23 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-10-05 09:57:23 : INFO] - Cache for URL: http://localhost:8080/produk/beras-premium-ukm/ has been purged, triggered by action: save_post 
+[2026-10-05 09:57:23 : INFO] - Cache for archive page associated with post_type: produk and Title: "Beras Premium Solok" has been purged, triggered by action: save_post 
+[2026-10-05 09:57:28 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-10-05 09:57:28 : INFO] - Cache for URL: http://localhost:8080/produk/beras-premium-solok/ has been purged, triggered by action: save_post 
+[2026-10-05 09:57:28 : INFO] - Cache for archive page associated with post_type: produk and Title: "Beras Premium Solok" has been purged, triggered by action: save_post 
+[2026-10-05 09:57:41 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-10-05 09:57:41 : INFO] - Cache for URL: http://localhost:8080/produk/sabun-mandi-keluarga/ has been purged, triggered by action: save_post 
+[2026-10-05 09:57:41 : INFO] - Cache for archive page associated with post_type: produk and Title: "Sabun Mandi Keluarga" has been purged, triggered by action: save_post 
+[2026-10-05 09:57:59 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2026-10-05 09:57:59 : INFO] - Cache for URL: http://localhost:8080/produk/kopi-bubuk-neo/ has been purged, triggered by action: save_post 
+[2026-10-05 09:57:59 : INFO] - Cache for archive page associated with post_type: produk and Title: "Kopi Bubuk Neo" has been purged, triggered by action: save_post 
