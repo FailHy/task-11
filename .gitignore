@@ -1,0 +1,4 @@
+*.log
+wp-content/uploads/wc-logs/
+.DS_Store
+Thumbs.db
