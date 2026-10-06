@@ -245,3 +245,25 @@ function ukm_toko_start_html_minify() {
 }
 add_action( 'template_redirect', 'ukm_toko_start_html_minify', 0 );
 
+/**
+ * 13. Dequeue Unneeded Assets on Frontend & Defer Non-Critical Scripts
+ */
+function ukm_toko_optimize_scripts() {
+	if ( ! is_admin() ) {
+		wp_dequeue_style( 'woocommerce-blocktheme' );
+		wp_dequeue_script( 'jquery-migrate' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'ukm_toko_optimize_scripts', 100 );
+
+function ukm_toko_defer_frontend_scripts( $tag, $handle, $src ) {
+	if ( is_admin() ) {
+		return $tag;
+	}
+	if ( strpos( $tag, 'defer' ) !== false || strpos( $tag, 'async' ) !== false ) {
+		return $tag;
+	}
+	return str_replace( ' src', ' defer src', $tag );
+}
+add_filter( 'script_loader_tag', 'ukm_toko_defer_frontend_scripts', 10, 3 );
+
