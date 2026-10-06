@@ -114,6 +114,20 @@ function ukm_toko_register_native_blocks() {
 }
 add_action( 'init', 'ukm_toko_register_native_blocks' );
 
+/**
+ * Enqueue scripts and styles untuk Gutenberg Block Editor
+ */
+function ukm_toko_enqueue_block_editor_assets() {
+	wp_enqueue_script(
+		'ukm-block-editor-js',
+		get_template_directory_uri() . '/js/blocks.js',
+		array( 'wp-blocks', 'wp-element', 'wp-block-editor', 'wp-components', 'wp-server-side-render' ),
+		filemtime( get_template_directory() . '/js/blocks.js' ),
+		true
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'ukm_toko_enqueue_block_editor_assets' );
+
 // ==========================================
 // RENDER CALLBACKS
 // ==========================================
