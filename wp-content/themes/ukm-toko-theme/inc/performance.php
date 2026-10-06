@@ -61,6 +61,9 @@ function ukm_toko_preload_critical_assets() {
 		: get_stylesheet_uri();
 
 	echo '<link rel="preload" href="' . esc_url( $css_uri ) . '" as="style">' . "\n";
+	if ( is_front_page() || is_home() ) {
+		echo '<link rel="preload" href="' . esc_url( site_url( '/wp-content/uploads/2026/10/bekgron.jpg' ) ) . '" as="image" fetchpriority="high">' . "\n";
+	}
 }
 add_action( 'wp_head', 'ukm_toko_preload_critical_assets', 1 );
 

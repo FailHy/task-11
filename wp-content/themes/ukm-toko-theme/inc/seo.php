@@ -82,6 +82,9 @@ function ukm_toko_inject_social_meta() {
 		}
 	}
 
+	echo "<!-- Standard SEO Meta -->\n";
+	echo '<meta name="description" content="' . esc_attr( $description ) . '" />' . "\n";
+
 	echo "<!-- Open Graph Meta Tags -->\n";
 	echo '<meta property="og:locale" content="id_ID" />' . "\n";
 	echo '<meta property="og:type" content="' . esc_attr( $type ) . '" />' . "\n";
