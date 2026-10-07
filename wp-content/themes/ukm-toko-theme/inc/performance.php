@@ -84,6 +84,8 @@ function ukm_toko_inline_critical_css() {
 		.site-title a{color:var(--ukm-primary);text-decoration:none;}
 		.nav-menu{list-style:none;margin:0;padding:0;display:flex;gap:15px;}
 		.nav-menu a{color:var(--ukm-text);text-decoration:none;font-weight:600;font-size:14px;}
+		.menu-toggle{display:none;}
+		@media(max-width:768px){.menu-toggle{display:inline-flex;align-items:center;gap:4px;padding:6px 10px;background:#fff;border:1px solid var(--ukm-border);border-radius:4px;cursor:pointer;font-weight:700;font-size:13px;}.main-navigation:not(.toggled) .nav-menu{display:none;}}
 	</style>
 	<?php
 }

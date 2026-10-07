@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (!menu.classList.contains('nav-menu')) {
                     menu.classList.add('nav-menu');
                 }
-                button.addEventListener('click', function () {
+                button.addEventListener('click', function (e) {
+                    e.stopPropagation();
                     if (nav.classList.contains('toggled')) {
                         nav.classList.remove('toggled');
                         button.setAttribute('aria-expanded', 'false');
@@ -22,6 +23,25 @@ document.addEventListener('DOMContentLoaded', function () {
                         button.setAttribute('aria-expanded', 'true');
                     }
                 });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function (e) {
+                    if (!nav.contains(e.target)) {
+                        nav.classList.remove('toggled');
+                        button.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Close mobile menu when clicking a link
+                var navLinks = menu.querySelectorAll('a');
+                for (var i = 0; i < navLinks.length; i++) {
+                    navLinks[i].addEventListener('click', function () {
+                        if (window.innerWidth <= 768) {
+                            nav.classList.remove('toggled');
+                            button.setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                }
             }
         }
     }
