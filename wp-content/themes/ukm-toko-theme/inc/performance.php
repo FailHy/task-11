@@ -101,20 +101,39 @@ function ukm_toko_cache_headers() {
 		header( 'X-Content-Type-Options: nosniff' );
 		header( 'X-Frame-Options: SAMEORIGIN' );
 
+		// Deteksi apakah ini request transaksi WooCommerce, cart, checkout, akun, atau AJAX
+		$request_uri = isset( $_SERVER['REQUEST_URI'] ) ? strtolower( $_SERVER['REQUEST_URI'] ) : '';
+		$has_wc_cookie = (
+			isset( $_COOKIE['woocommerce_items_in_cart'] ) ||
+			isset( $_COOKIE['woocommerce_cart_hash'] )
+		);
+		$is_transact = (
+			strpos( $request_uri, '/cart' ) !== false ||
+			strpos( $request_uri, '/checkout' ) !== false ||
+			strpos( $request_uri, '/my-account' ) !== false ||
+			strpos( $request_uri, 'wc-ajax' ) !== false ||
+			$has_wc_cookie ||
+			( function_exists( 'is_cart' ) && is_cart() ) ||
+			( function_exists( 'is_checkout' ) && is_checkout() ) ||
+			( function_exists( 'is_account_page' ) && is_account_page() )
+		);
+
+		if ( $is_transact ) {
+			header( 'Cache-Control: no-cache, no-store, must-revalidate, max-age=0' );
+			header( 'Pragma: no-cache' );
+			header( 'Expires: 0' );
+			return;
+		}
+
 		// Cache Headers untuk halaman publik non-transaksional
 		if ( ! is_user_logged_in() && ! is_admin() ) {
-			if ( function_exists( 'is_cart' ) && is_cart() ) {
-				header( 'Cache-Control: no-cache, no-store, must-revalidate, max-age=0' );
-			} elseif ( function_exists( 'is_checkout' ) && is_checkout() ) {
-				header( 'Cache-Control: no-cache, no-store, must-revalidate, max-age=0' );
-			} else {
-				header( 'Cache-Control: public, max-age=3600, stale-while-revalidate=86400' );
-				header( 'Expires: ' . gmdate( 'D, d M Y H:i:s', time() + 3600 ) . ' GMT' );
-			}
+			header( 'Cache-Control: public, max-age=3600, stale-while-revalidate=86400' );
+			header( 'Expires: ' . gmdate( 'D, d M Y H:i:s', time() + 3600 ) . ' GMT' );
 		}
 	}
 }
 add_action( 'send_headers', 'ukm_toko_cache_headers' );
+add_action( 'template_redirect', 'ukm_toko_cache_headers', 1 );
 
 /**
  * 7. Konfigurasi & Filter CDN Images (Requirement 37 & 45)
