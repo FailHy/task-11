@@ -133,4 +133,30 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 5000);
         });
     });
+
+    // 4. Auto-update WooCommerce Cart on quantity change (clean UX without manual update button)
+    var cartUpdateTimer;
+    document.addEventListener('change', function (e) {
+        if (e.target && e.target.matches && e.target.matches('.woocommerce-cart-form input.qty, .woocommerce-cart-form input[name$="[qty]"]')) {
+            clearTimeout(cartUpdateTimer);
+            var form = e.target.closest('form.woocommerce-cart-form');
+            if (!form) return;
+            var updateBtn = form.querySelector('button[name="update_cart"], input[name="update_cart"]');
+            cartUpdateTimer = setTimeout(function () {
+                if (updateBtn) {
+                    updateBtn.disabled = false;
+                    updateBtn.removeAttribute('aria-disabled');
+                    updateBtn.click();
+                }
+            }, 500);
+        }
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' && e.target && e.target.matches && e.target.matches('.woocommerce-cart-form input.qty, .woocommerce-cart-form input[name$="[qty]"]')) {
+            e.preventDefault();
+            e.target.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+    });
 });
+
